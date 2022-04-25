@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "tab-icon-lifeserve1-nor.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "tab-icon-lifeserve1-nor@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "tab-icon-lifeserve1-nor@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
