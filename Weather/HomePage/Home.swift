@@ -10,9 +10,9 @@ import SwiftUI
 struct Home: View {
     @State var selectedIndex2 = 0
     @State var selectedIndex3 = 0
-    var arr = [["今天4月26日","27°~18°","ic-wx"],["明天4月27日","27°~12°","ic-pl"],["后天4月28日","23°~18°","ic-ws"],["周四4月29日","27°~12°","ic-pl"],["周五4月30日","27°~18°","ic-ws"]]
+    var arr = [["今天4月26日","27°~18°","duoyun"],["明天4月27日","27°~12°","zhenyu"],["后天4月28日","23°~18°","xiaoyu"],["周四4月29日","27°~12°","duoyun"],["周五4月30日","27°~18°","yintian"]]
     
-    var arr2 = [["ic-wx","20°","12:00"],["ic-pl","18°","13:00"],["ic-ws","21°","14:00"],["ic-wx","22°","15:00"],["ic-pl","24°","16:00"],["ic-ws","22°","17:00"]]
+    var arr2 = [["duoyun","20°","12:00"],["duoyun","18°","13:00"],["zhenyu","21°","14:00"],["yintian","22°","15:00"],["zhenyu","24°","16:00"],["zhenyu","22°","17:00"]]
     var body: some View {
         
         NavigationView {
@@ -27,9 +27,15 @@ struct Home: View {
                             HStack {
                                 if i == selectedIndex2{
                                     Image(arr[i][2])
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50)
                                         .shadow(color: .white, radius: 3,  y: 3)
                                 }else{
                                     Image(arr[i][2])
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 50)
                                 }
                                 VStack{
                                     if i == selectedIndex2{
@@ -58,12 +64,15 @@ struct Home: View {
                                 
                                 VStack {
                                     Image(arr2[i][0])
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 70)
                                         .shadow(color: .white, radius: 7,  y: 5)
                                     Text(arr2[i][1])
                                         .bold()
                                     Text(arr2[i][2])
                                         .bold()
-                                    Image(systemName: "location.north.circle")
+                                    Image(systemName: "triangle.fill")
                                 }
                                 
                                 .background(Image("box")
@@ -72,6 +81,9 @@ struct Home: View {
                             }else{
                                 VStack{
                                     Image(arr2[i][0])
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 70)
                                     Text(arr2[i][1])
                                     Text(arr2[i][2])
                                 }.onTapGesture {

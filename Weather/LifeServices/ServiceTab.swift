@@ -38,7 +38,7 @@ struct ServiceTab: View {
                 
                 ClothesAndLunarRow()
                 
-                TwentyFourHourCard()
+                TwentyFourHourCard().frame(height:300)
                 
                 FiveDaysWind()
                 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TempratureAnd6Item: View {
     @Binding var selectedIndex:Int
-    var arr2 = [["20~28C","阴 | 17:00发布","12","87%","1024hpa","1级","弱","2.4公里"],["20~22C","晴 | 17:00发布","14","81%","1044hpa","3级","强","1.2公里"]]
+    var arr2 = [["20~28°C","阴 | 17:00发布","12","87%","1024hpa","1级","弱","2.4公里"],["20~22C","晴 | 17:00发布","14","81%","1044hpa","3级","强","1.2公里"]]
     let rule = [GridItem(.flexible(minimum: 80, maximum: 200)),GridItem(.flexible(minimum: 80, maximum: 200)),GridItem(.flexible(minimum: 80, maximum: 200))]
     var Words = ["体感","温度","气压","东北风","紫外线","能见度"]
     var body: some View {
@@ -22,7 +22,11 @@ struct TempratureAnd6Item: View {
                     Text(arr2[selectedIndex][1])
                 }
                 Spacer()
-                Image("icon-7")
+                Image("duoyun")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 75)
+                    .shadow(color: .white, radius: 3,  y: 3)
             }.padding(.horizontal)
                 .padding(.top)
             LazyVGrid(columns: rule) {

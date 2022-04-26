@@ -53,8 +53,10 @@ struct WeatherViewsTab: View {
 
                     }
                     TwentyFourHourWeather()
+                }
+                .frame(height:200)
+                .foregroundColor(.white)
                     
-                }.foregroundColor(.white)
                     .padding()
                     .background(.white)
                     .cornerRadius(10)
@@ -69,7 +71,6 @@ struct WeatherViewsTab: View {
                 
                 Spacer()
             }
-            //.padding()
             
         }.background(Color(red: 0.938, green: 0.945, blue: 0.961))
         

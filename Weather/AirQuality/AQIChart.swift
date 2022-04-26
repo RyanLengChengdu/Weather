@@ -1,44 +1,50 @@
 //
-//  TwentyFourHourWeather.swift
+//  AQIChart.swift
 //  Weather
 //
-//  Created by 冷锐鹏 on 2022/4/22.
+//  Created by 冷锐鹏 on 2022/4/26.
 //
 
 import SwiftUI
 import SwiftUICharts
-struct TwentyFourHourWeather: View {
-    
+struct AQIChart: View {
     let data : LineChartData = weekOfData()
-    
     var body: some View {
-        VStack {
-            FilledLineChart(chartData: data)
-                //.xAxisGrid(chartData: data)
-                //.yAxisGrid(chartData: data)
-                .xAxisLabels(chartData: data)
-                .yAxisLabels(chartData: data)
-                .headerBox(chartData: data)
-                .frame(alignment: .center)
-        }
+        VStack(alignment:.leading){
+            Text("空气质量(AQI)")
+                .bold()
+                .font(.title2)
+            ScrollView(.horizontal, showsIndicators: false) {
+                LineChart(chartData: data)
+                    //.pointMarkers(chartData: data)
+                    //点击显示详细数据
+                    //.touchOverlay(chartData: data, specifier: "%.0f")
+                    .yAxisGrid(chartData: data)
+                    .xAxisLabels(chartData: data)
+                    .yAxisLabels(chartData: data)
+                    .headerBox(chartData: data)
+                    .frame(minWidth: 800, maxWidth: 900, alignment: .center)
+            }
+        }.padding()
     }
-    
     static func weekOfData() -> LineChartData {
         let data = LineDataSet(dataPoints: [
-            LineChartDataPoint(value: 15, xAxisLabel: "00:00", description: "Monday"),
-            LineChartDataPoint(value: 17, xAxisLabel: "04:00", description: "Tuesday"),
-            LineChartDataPoint(value: 19,  xAxisLabel: "08:00", description: "Wednesday"),
-            LineChartDataPoint(value: 24, xAxisLabel: "12:00", description: "Thursday"),
-            LineChartDataPoint(value: 27, xAxisLabel: "16:00", description: "Friday"),
-            LineChartDataPoint(value: 27, xAxisLabel: "20:00", description: "Saturday"),
-            LineChartDataPoint(value: 25,  xAxisLabel: "24:00", description: "Sunday")
+            LineChartDataPoint(value: 123, xAxisLabel: "现在"),
+            LineChartDataPoint(value: 87, xAxisLabel: "12:00"),
+            LineChartDataPoint(value: 65,  xAxisLabel: "13:00"),
+            LineChartDataPoint(value: 111,  xAxisLabel: "14:00"),
+            LineChartDataPoint(value: 145,  xAxisLabel: "15:00"),
+            LineChartDataPoint(value: 76,  xAxisLabel: "16:00"),
+            LineChartDataPoint(value: 85,  xAxisLabel: "17:00"),
+            LineChartDataPoint(value: 85,  xAxisLabel: "18:00"),
+            LineChartDataPoint(value: 85,  xAxisLabel: "19:00"),
         ],
         legendTitle: "Steps",
         pointStyle: PointStyle(),
-                               style: LineStyle(lineColour: ColourStyle(colour: .blue.opacity(0.2)), lineType: .curvedLine))
+        style: LineStyle(lineColour: ColourStyle(colour: .green), lineType: .curvedLine))
         
         
-        let gridStyle  = GridStyle(numberOfLines: 7,
+        let gridStyle  = GridStyle(numberOfLines: 3,
                                    lineColour   : Color(.lightGray).opacity(0.5),
                                    lineWidth    : 1,
                                    dash         : [8],
@@ -60,8 +66,11 @@ struct TwentyFourHourWeather: View {
                                         yAxisLabelColour    : Color.primary,
                                         yAxisNumberOfLabels : 3,
                                         
-                                        baseline            : .minimumWithMaximum(of: 12),
-                                        topLine             : .maximum(of: 30))
+                                        baseline            : .minimumWithMaximum(of: 0),
+                                        topLine             : .maximum(of: 200)
+                                        
+                                        //globalAnimation     : .easeOut(duration: 1)
+        )
         
         return LineChartData(dataSets       : data,
                 
@@ -70,8 +79,8 @@ struct TwentyFourHourWeather: View {
     }
 }
 
-struct TwentyFourHourWeather_Previews: PreviewProvider {
+struct AQIChart_Previews: PreviewProvider {
     static var previews: some View {
-        TwentyFourHourWeather()
+        AQIChart()
     }
 }

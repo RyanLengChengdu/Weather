@@ -15,19 +15,28 @@ struct LifeAssistant: View {
             Text("生活小助手")
                 .bold()
                 .font(.title3)
+            
+            
             LazyVGrid(columns: rule, alignment: .center, spacing: 10) {
                 
                 ForEach(AssistantArr,id: \.self){arr in
-                    VStack{
-                        Image(arr[0])
-                            .resizable()
-                            .frame(width: 34.5, height: 37)
-                        Text(arr[1])
+                    NavigationLink {
+                        TravelInfo()
+                            .navigationTitle("旅游指南")
+                            .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        VStack{
+                            Image(arr[0])
+                                .resizable()
+                                .frame(width: 34.5, height: 37)
+                            Text(arr[1])
+                                .foregroundColor(.secondary)
+                        }
                     }
+
+                    
                 }
-                
-                
-                
+
             }
         }
         .padding()

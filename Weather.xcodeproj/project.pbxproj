@@ -17,6 +17,11 @@
 		5F56135928168AB4009FC745 /* SeveralRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F56135828168AB4009FC745 /* SeveralRows.swift */; };
 		5F56135B28168ACE009FC745 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F56135A28168ACE009FC745 /* TopView.swift */; };
 		5F61A8672814FAA200BB7795 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 5F61A8662814FAA200BB7795 /* SwiftUICharts */; };
+		5F6D4D1A28178C31007952DB /* AQIChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D4D1928178C31007952DB /* AQIChart.swift */; };
+		5F6D4D1C2817CEE9007952DB /* LineChart1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D4D1B2817CEE9007952DB /* LineChart1.swift */; };
+		5F6D4D1E2817D342007952DB /* FiftyDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D4D1D2817D342007952DB /* FiftyDays.swift */; };
+		5F6D4D202817E5FC007952DB /* TravelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D4D1F2817E5FC007952DB /* TravelInfo.swift */; };
+		5F6D4D222817ED5F007952DB /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6D4D212817ED5F007952DB /* InfoRow.swift */; };
 		5FD4560A2812407300C54836 /* TwentyFourHourWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD456092812407300C54836 /* TwentyFourHourWeather.swift */; };
 		5FD4560F28124E3A00C54836 /* LineChartDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4560E28124E3900C54836 /* LineChartDemoView.swift */; };
 		5FD45611281270EF00C54836 /* TwentyFourHourCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD45610281270EF00C54836 /* TwentyFourHourCard.swift */; };
@@ -53,6 +58,11 @@
 		5F56135528163D46009FC745 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		5F56135828168AB4009FC745 /* SeveralRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeveralRows.swift; sourceTree = "<group>"; };
 		5F56135A28168ACE009FC745 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		5F6D4D1928178C31007952DB /* AQIChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQIChart.swift; sourceTree = "<group>"; };
+		5F6D4D1B2817CEE9007952DB /* LineChart1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart1.swift; sourceTree = "<group>"; };
+		5F6D4D1D2817D342007952DB /* FiftyDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiftyDays.swift; sourceTree = "<group>"; };
+		5F6D4D1F2817E5FC007952DB /* TravelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInfo.swift; sourceTree = "<group>"; };
+		5F6D4D212817ED5F007952DB /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
 		5FD456092812407300C54836 /* TwentyFourHourWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyFourHourWeather.swift; sourceTree = "<group>"; };
 		5FD4560E28124E3900C54836 /* LineChartDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartDemoView.swift; sourceTree = "<group>"; };
 		5FD45610281270EF00C54836 /* TwentyFourHourCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyFourHourCard.swift; sourceTree = "<group>"; };
@@ -104,9 +114,12 @@
 		5F0ACC1828151EB6009ADE87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5FD4560E28124E3900C54836 /* LineChartDemoView.swift */,
 				5F0ACC1928152035009ADE87 /* TimeSelector.swift */,
 				5F0ACC1B28152107009ADE87 /* TempratureAnd6Item.swift */,
 				5F0ACC1D2815221B009ADE87 /* HotWeatherNotice.swift */,
+				5F6D4D1B2817CEE9007952DB /* LineChart1.swift */,
+				5F6D4D1D2817D342007952DB /* FiftyDays.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				5F0ACC2428153D3E009ADE87 /* AirQuality.swift */,
+				5F6D4D1928178C31007952DB /* AQIChart.swift */,
 			);
 			path = AirQuality;
 			sourceTree = "<group>";
@@ -140,6 +154,8 @@
 		5F56135C28169FE3009FC745 /* TravelInfo */ = {
 			isa = PBXGroup;
 			children = (
+				5F6D4D1F2817E5FC007952DB /* TravelInfo.swift */,
+				5F6D4D212817ED5F007952DB /* InfoRow.swift */,
 			);
 			path = TravelInfo;
 			sourceTree = "<group>";
@@ -244,7 +260,6 @@
 				5FF06C15280FFC320039C2A2 /* FitRow.swift */,
 				5FF06C17281004140039C2A2 /* ClothesAndLunarRow.swift */,
 				5FD456092812407300C54836 /* TwentyFourHourWeather.swift */,
-				5FD4560E28124E3900C54836 /* LineChartDemoView.swift */,
 				5FD45610281270EF00C54836 /* TwentyFourHourCard.swift */,
 				5F0ACC1F28153AB0009ADE87 /* FiveDays.swift */,
 				5F0ACC2128153B2F009ADE87 /* FiveDaysWind.swift */,
@@ -337,9 +352,11 @@
 				5FE00244281141A30080F6F2 /* LocationManager.swift in Sources */,
 				5FF06C07280FD3720039C2A2 /* RoadInfo.swift in Sources */,
 				5FF06C09280FD3C60039C2A2 /* FourtyDaysRow.swift in Sources */,
+				5F6D4D222817ED5F007952DB /* InfoRow.swift in Sources */,
 				5FD4561A2812847800C54836 /* PageControl.swift in Sources */,
 				5FD45611281270EF00C54836 /* TwentyFourHourCard.swift in Sources */,
 				5F0ACC1C28152107009ADE87 /* TempratureAnd6Item.swift in Sources */,
+				5F6D4D1C2817CEE9007952DB /* LineChart1.swift in Sources */,
 				5FF06C12280FE8250039C2A2 /* CityRow.swift in Sources */,
 				5FD456142812787600C54836 /* PageViewController.swift in Sources */,
 				5F0ACC2528153D3E009ADE87 /* AirQuality.swift in Sources */,
@@ -351,6 +368,9 @@
 				5F0ACC2228153B30009ADE87 /* FiveDaysWind.swift in Sources */,
 				5FE0024128113A780080F6F2 /* MorningRow3.swift in Sources */,
 				5F56135B28168ACE009FC745 /* TopView.swift in Sources */,
+				5F6D4D1E2817D342007952DB /* FiftyDays.swift in Sources */,
+				5F6D4D1A28178C31007952DB /* AQIChart.swift in Sources */,
+				5F6D4D202817E5FC007952DB /* TravelInfo.swift in Sources */,
 				5FD4561628127DA400C54836 /* FeatureCard.swift in Sources */,
 				5F56135628163D46009FC745 /* Home.swift in Sources */,
 				5F0ACC1E2815221B009ADE87 /* HotWeatherNotice.swift in Sources */,
